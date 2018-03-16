@@ -21,7 +21,6 @@ module.exports = function (config) {
       'karma-jasmine',
       'karma-chrome-launcher',
       'karma-jasmine-html-reporter',
-      'karma-jasmine',
       'karma-jasmine-matchers'
     ],
     reporters: ['progress', 'kjhtml'],

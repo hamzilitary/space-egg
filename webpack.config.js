@@ -1,5 +1,8 @@
-const path = require('path');
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const path = require('path')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const CleanWebpackPlugin = require('clean-webpack-plugin')
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
+const KarmaJasmineMatchersPlugin = require('karma-jasmine-matchers')
 
 module.exports = {
   entry: './src/main.js',
@@ -7,19 +10,43 @@ module.exports = {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist')
   },
-  devtool: 'eval-source-map',
-  devserver: {
+  devtool: 'inline-source-map',
+  devServer: {
     contentBase: './dist'
   },
   plugins: [
-    new UglifyJsPlugin(),
-  ]
+    new UglifyJsPlugin({ sourceMap: true }),
+    new CleanWebpackPlugin(['dist']),
+    new HtmlWebpackPlugin({
+      title: 'JSTemplate',
+      template: './src/index.html',
+      inject: 'body'
+    })
+
+  ],
   module: {
     rules: [
       {
+        test: /\.js$/,
+        exclude: [
+          /node_modules/,
+          /spec/
+        ],
+        loader: 'eslint-loader'
+      },
+      {
+        test: /\.js$/,
+        exclude: [
+          /node_modules/,
+          /spec/
+        ],
+        loader: 'babel-loader',
+        options: {
+          presets: ['es2015']
+        }
+      },
+      {
         test: /\.css$/,
-        exclude: /node_modules/,
-        loader: "eslint-loader"
         use: [
           'style-loader',
           'css-loader'
@@ -27,4 +54,4 @@ module.exports = {
       }
     ]
   }
-};
+}

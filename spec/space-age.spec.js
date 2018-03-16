@@ -50,7 +50,12 @@ describe('SpageAge', function() {
     expect(1.52).toEqual(jupiterAge);
   })
 
-
+  it('should return the number of years left of life expectancy', function () {
+    let userAge = new SpaceAge();
+    userAge.setAge("03/16/2000");
+    let yearsLeft = userAge.lifeExpectancy();
+    expect(62).toEqual(yearsLeft);
+  })
 
 
 })

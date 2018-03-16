@@ -51,4 +51,8 @@ export class SpaceAge {
     return jupiterAge;
   }
 
+  lifeExpectancy(){
+    const deathAge = 80; //average of 2017 life expectancy regardless of gender
+    return deathAge;
+  }
 }

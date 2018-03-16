@@ -21,4 +21,11 @@ describe('SpageAge', function() {
     dateAge.setAge("03/16/2000");
     expect(18).toEqual(dateAge.age)
   })
+
+  it('should convert user age into Mercurian years', function() {
+    let userAge = new SpaceAge();
+    userAge.setAge("03/16/2000");
+    let mercuryAge = userAge.onMercury();
+    expect(74.7).toEqual(mercuryAge);
+  })
 })

@@ -11,9 +11,7 @@ export class SpaceAge {
       let today = new Date();
       let birthday = new Date(age);
       let ageDate = today - birthday;
-      console.log(ageDate);
       let numberAge = Math.round(ageDate/31536000000);
-      console.log(numberAge);
       this.age = numberAge;
       return this.age;
     }
@@ -27,5 +25,10 @@ export class SpaceAge {
     let userAge = this.age;
     let secondsAge = Math.round(userAge*inSeconds);
     return secondsAge;
+  }
+
+  onMercury(){
+    let mercuryAge = "";
+    return mercuryAge;
   }
 }

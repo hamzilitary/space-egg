@@ -56,13 +56,16 @@ export class SpaceAge {
     if (this.age < deathAge) {
       let yearsLeft = deathAge - this.age;
       return yearsLeft;
-      console.log(yearsLeft);
     } else if (this.age >= deathAge) {
       let yearsPast = this.age - deathAge;
       return yearsPast;
-      console.log(yearsPast);
     } else {
       return "Enter an Age";
     }
+  }
+
+  lifeOnOtherPlanets(){
+    let options = [];
+    return options;
   }
 }

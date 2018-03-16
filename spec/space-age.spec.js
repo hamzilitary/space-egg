@@ -60,9 +60,15 @@ describe('SpageAge', function() {
   it('should return the number of years lived past life expectancy', function () {
     let userAge = new SpaceAge();
     userAge.setAge("03/16/1930");
-    console.log(userAge.age);
     let yearsPast = userAge.lifeExpectancy();
     expect(8).toEqual(yearsPast);
+  })
+
+  it('should convert user years left to live or user years lived past expectancy into years on all the other planets', function () {
+    let userAge = new SpaceAge();
+    userAge.setAge("03/16/1956");
+    let options = userAge.lifeOnOtherPlanets();
+    expect(options).toEqual([75,29.03,9.57,1.52])
   })
 
 })

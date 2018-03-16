@@ -11,4 +11,10 @@ describe('SpageAge', function() {
     let ageInSec = testAge.makeSeconds();
     expect(ageInSec).toEqual(568034265)
   })
+
+  it('should determine if date or int is entered', function () {
+    let ageAge = new SpaceAge(18);
+    let dateAge = new SpaceAge("03/16/2000");
+    expect(ageAge).toEqual(dateAge)
+  })
 })

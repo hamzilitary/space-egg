@@ -52,9 +52,17 @@ export class SpaceAge {
   }
 
   lifeExpectancy(){
-    const deathAge = 80; //average of 2017 life expectancy regardless of gender
-    let userAge = this.age;
-    let yearsLeft = deathAge - userAge;
-    return yearsLeft;
+    const deathAge = 80;
+    if (this.age < deathAge) {
+      let yearsLeft = deathAge - this.age;
+      return yearsLeft;
+      console.log(yearsLeft);
+    } else if (this.age >= deathAge) {
+      let yearsPast = this.age - deathAge;
+      return yearsPast;
+      console.log(yearsPast);
+    } else {
+      return "Enter an Age";
+    }
   }
 }

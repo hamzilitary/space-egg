@@ -3,6 +3,13 @@ export class SpaceAge {
     this.age;
   }
 
+  makeSeconds(){
+    const inSeconds = 31557459.167;
+    let userAge = this.age;
+    let secondsAge = Math.round(userAge*inSeconds);
+    return secondsAge;
+  }
+
   setAge(age){
     if(typeof age === "number") {
       this.age = age;
@@ -18,13 +25,6 @@ export class SpaceAge {
     else {
       return "enter an age or a date";
     }
-  }
-
-  makeSeconds(){
-    const inSeconds = 31557459.167;
-    let userAge = this.age;
-    let secondsAge = Math.round(userAge*inSeconds);
-    return secondsAge;
   }
 
   onMercury(){
@@ -53,6 +53,8 @@ export class SpaceAge {
 
   lifeExpectancy(){
     const deathAge = 80; //average of 2017 life expectancy regardless of gender
-    return deathAge;
+    let userAge = this.age;
+    let yearsLeft = deathAge - userAge;
+    return yearsLeft;
   }
 }

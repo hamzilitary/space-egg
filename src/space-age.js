@@ -4,7 +4,9 @@ export class SpaceAge {
   }
 
   makeSeconds(){
-    let secondsAge = "";
+    const inSeconds = 31557459.167;
+    let userAge = this.age;
+    let secondsAge = Math.round(userAge*inSeconds);
     return secondsAge;
   }
 }

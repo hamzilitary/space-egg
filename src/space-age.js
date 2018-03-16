@@ -28,7 +28,8 @@ export class SpaceAge {
   }
 
   onMercury(){
-    let mercuryAge = "";
+    const onMercury = .24;
+    let mercuryAge = ((this.age / onMercury).toFixed(2))/1;
     return mercuryAge;
   }
 }

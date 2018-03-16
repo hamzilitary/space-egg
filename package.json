@@ -35,6 +35,7 @@
     "karma-jasmine-matchers": "*",
     "karma-jquery": "^0.2.2",
     "karma-webpack": "^2.0.13",
+    "moment": "^2.21.0",
     "standard": "*",
     "style-loader": "^0.20.2",
     "uglifyjs-webpack-plugin": "^1.2.2",
@@ -45,6 +46,7 @@
   "dependencies": {
     "bootstrap": "^4.0.0",
     "jquery": "^3.3.1",
-    "popper.js": "^1.14.0"
+    "popper.js": "^1.14.0",
+    "moment": "^2.21.0"
   }
 }

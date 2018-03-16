@@ -3,6 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 const KarmaJasmineMatchersPlugin = require('karma-jasmine-matchers')
+const moment = require('moment')
 
 module.exports = {
   entry: './src/main.js',

@@ -1,6 +1,25 @@
 export class SpaceAge {
-  constructor(age) {
-    this.age = age;
+  constructor() {
+    this.age;
+  }
+
+  setAge(age){
+    if(typeof age === "number") {
+      this.age = age;
+      return this.age;
+    } else if (typeof age === "string") {
+      let today = new Date();
+      let birthday = new Date(age);
+      let ageDate = today - birthday;
+      console.log(ageDate);
+      let numberAge = Math.round(ageDate/31536000000);
+      console.log(numberAge);
+      this.age = numberAge;
+      return this.age;
+    }
+    else {
+      return "enter an age or a date";
+    }
   }
 
   makeSeconds(){

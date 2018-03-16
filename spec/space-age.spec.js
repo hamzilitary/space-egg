@@ -28,4 +28,29 @@ describe('SpageAge', function() {
     let mercuryAge = userAge.onMercury();
     expect(75).toEqual(mercuryAge);
   })
+
+  it('should convert user age into Venusian years', function() {
+    let userAge = new SpaceAge();
+    userAge.setAge("03/16/2000");
+    let venusAge = userAge.onVenus();
+    expect(29.03).toEqual(venusAge);
+  })
+
+  it('should convert user age into Martian years', function() {
+    let userAge = new SpaceAge();
+    userAge.setAge("03/16/2000");
+    let marsAge = userAge.onMars();
+    expect(9.57).toEqual(marsAge);
+  })
+
+  it('should convert user age into Jovian years', function() {
+    let userAge = new SpaceAge();
+    userAge.setAge("03/16/2000");
+    let jupiterAge = userAge.onJupiter();
+    expect(1.52).toEqual(jupiterAge);
+  })
+
+
+
+
 })

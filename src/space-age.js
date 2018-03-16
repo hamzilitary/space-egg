@@ -28,8 +28,27 @@ export class SpaceAge {
   }
 
   onMercury(){
-    const onMercury = .24;
-    let mercuryAge = ((this.age / onMercury).toFixed(2))/1;
+    const onMercuryRatio = .24;
+    let mercuryAge = ((this.age / onMercuryRatio).toFixed(2))/1;
     return mercuryAge;
   }
+
+  onVenus(){
+    const onVenusRatio = .62;
+    let venusAge = ((this.age / onVenusRatio).toFixed(2))/1;
+    return venusAge;
+  }
+
+  onMars(){
+    const onMarsRatio = 1.88;
+    let marsAge = ((this.age / onMarsRatio).toFixed(2))/1;
+    return marsAge;
+  }
+
+  onJupiter(){
+    const onJupiterRatio = 11.86;
+    let jupiterAge = ((this.age / onJupiterRatio).toFixed(2))/1;
+    return jupiterAge;
+  }
+
 }

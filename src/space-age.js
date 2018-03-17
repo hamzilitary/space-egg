@@ -66,6 +66,14 @@ export class SpaceAge {
 
   lifeOnOtherPlanets(){
     let options = [];
+    let spaceOption = new SpaceAge();
+    let lifeYear = this.lifeExpectancy();
+    spaceOption.setAge(lifeYear);
+    options.push(spaceOption.onMercury());
+    options.push(spaceOption.onVenus());
+    options.push(spaceOption.onMars());
+    options.push(spaceOption.onJupiter());
+    console.log(options);
     return options;
   }
 }

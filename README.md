@@ -18,33 +18,27 @@ Space Age: An app to determine what age you would be on other planets in our sol
 
 * Using the input age or birthdate of the user, return that human's age in Mercurian years:
   - example input: 18 or "03/16/2018"
-  - example output: 74.7 Mercurian years
+  - example output: 75 Mercurian years
 
 * Using the input age or birthdate of the user, return that human's age in Venusian years:
   - example input: 18 or "03/16/2018"
-  - example output: 29.2 Venusian years
+  - example output: 29.03 Venusian years
 
 * Using the input age or birthdate of the user, return that human's age in Martian years:
   - example input: 18 or "03/16/2018"
-  - example output: 9.5 Martian years
+  - example output: 9.57 Martian years
 
 * Using the input age or birthdate of the user, return that human's age in Jovian years:
   - example input: 18 or "03/16/2018"
-  - example output: 1.51 Jovian years
+  - example output: 1.52 Jovian years
 
 * Using the input age or birthdate of the user, return that human's life expectancy on each planet:
   - example input: 18 or "03/16/2018"
-  - example output: 0 years - all the other planets are inhabitable!
+  - example output: 62 years on Earth
 
 * Using the input age or birthdate of the user, return how many years they've lived past the life expectancy on each planet:
-  - example input: 18 or "03/16/2018"
-  - example output:
-      - 18 Earth years
-      - 74.7 Mercurian years
-      - 29.2 Venusian years
-      - 9.5 Martian years
-      - 1.51 Jovian years
-
+  - example input: 88 or "03/16/1930"
+  - example output: 8 Earth years
 
 ## Setup/Installation Requirements
 

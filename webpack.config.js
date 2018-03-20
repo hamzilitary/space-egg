@@ -4,6 +4,7 @@ const CleanWebpackPlugin = require('clean-webpack-plugin')
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 const KarmaJasmineMatchersPlugin = require('karma-jasmine-matchers')
 const moment = require('moment')
+const THREE = require('three')
 
 module.exports = {
   entry: './src/main.js',
@@ -36,6 +37,10 @@ module.exports = {
         loader: 'eslint-loader'
       },
       {
+        test: /\.json$/,
+        loader: 'json-loader'
+      },
+      {
         test: /\.js$/,
         exclude: [
           /node_modules/,
@@ -52,7 +57,16 @@ module.exports = {
           'style-loader',
           'css-loader'
         ]
+      },
+      {
+        test: /three\/examples\/js/,
+        use: 'imports-loader?THREE=three'
       }
     ]
+  },
+  resolve: {
+    alias: {
+      'three-examples': path.join(__dirname, './node_modules/three/examples/js')
+    },
   }
 }
